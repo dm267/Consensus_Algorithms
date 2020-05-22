@@ -33,16 +33,18 @@ public class Coordinator{
             System.out.println("Wrong number of arguments passed!" +"\nPlease try again.");
         } else {
             Coordinator.numberOfParticipantsToConnect = Integer.parseInt(args[1]);
+            int coordinatorPort = Integer.parseInt(args[0]);
+            int timeOut = Integer.parseInt(args[2]);
 
-                for (int i = 2; i < args.length; i++){
-                    voteOptions.add(args[i]);
-                }
-                System.out.println("Voting Options Include: " +voteOptions);
-
-                int coordinatorPort = Integer.parseInt(args[0]);
-                new Coordinator().coordinatorStart(coordinatorPort);
+            for (int i = 3; i < args.length; i++){
+                voteOptions.add(args[i]);
             }
+
+            System.out.println("Voting Options Include: " +voteOptions);
+            System.out.println("Timeout is: " + timeOut +"ms");
+            new Coordinator().coordinatorStart(coordinatorPort);
         }
+    }
 
     public void coordinatorStart(int coordinatorPort) {
 
