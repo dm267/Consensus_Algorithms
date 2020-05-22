@@ -51,7 +51,7 @@ public class Coordinator{
         System.out.println("Server Port is: " + coordinatorPort);
         System.out.println("Number of expected participants to join is: " + numberOfParticipantsToConnect);
         List<participantThread> participants = this.participants;
-        CyclicBarrier threadBarrier = new CyclicBarrier(2, new BarrierReached());
+        CyclicBarrier threadBarrier = new CyclicBarrier(1, new BarrierReached());
         int threadNumber = 0;
 
         try {

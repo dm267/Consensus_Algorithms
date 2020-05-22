@@ -12,9 +12,9 @@ public class Participant {
     public static void main(String args []) throws IOException {
 
         int coordinatorPort = Integer.parseInt(args[0]);
-        int participantPort = Integer.parseInt(args[1]);
-        int timeout         = Integer.parseInt(args[2]);
-        int failureCond     = Integer.parseInt(args[3]);
+        int loggerPort      = Integer.parseInt(args[1]);
+        int participantPort = Integer.parseInt(args[2]);
+        int timeout         = Integer.parseInt(args[3]);
 
         try {
             InetAddress hostName;
