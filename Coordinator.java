@@ -33,11 +33,8 @@ public class Coordinator{
             System.out.println("Wrong number of arguments passed!" +"\nPlease try again.");
         } else {
             Coordinator.numberOfParticipantsToConnect = Integer.parseInt(args[1]);
-            int argumentLength = args.length;
 
-            if (argumentLength >= 3) {
-
-                for (int i = 2; i < argumentLength; i++){
+                for (int i = 2; i < args.length; i++){
                     voteOptions.add(args[i]);
                 }
                 System.out.println("Voting Options Include: " +voteOptions);
@@ -46,7 +43,6 @@ public class Coordinator{
                 new Coordinator().coordinatorStart(coordinatorPort);
             }
         }
-    }
 
     public void coordinatorStart(int coordinatorPort) {
 
